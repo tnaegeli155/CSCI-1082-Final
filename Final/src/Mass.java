@@ -40,4 +40,12 @@ public class Mass {
 		
 		return grams + " Grams";
 	}
+	
+	public static String toGrams(int num) {
+		double grams;
+		
+		grams = num*28.34;
+		
+		return grams + " Grams";
+	}
 }
