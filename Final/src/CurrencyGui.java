@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class CurrencyGui extends JFrame{
 	//choice strings
@@ -24,10 +26,46 @@ public class CurrencyGui extends JFrame{
 	JPanel p3 = new JPanel(new FlowLayout());
 	JPanel p4 = new JPanel(new FlowLayout());
 	
+	
+	public class CurrencyCalc implements ActionListener{
+
+		public void actionPerformed(ActionEvent e) {
+			String from = (String)fromChoice.getSelectedItem();
+			String to = (String)toChoice.getSelectedItem();
+			double start = Double.parseDouble(inputF.getText());
+			
+			if(to == "USD") {
+				
+				outputF.setText(String.valueOf(Currency.toUsd(start, from)));
+				
+			}else if(to == "EURO") {
+				outputF.setText(String.valueOf(Currency.toEuro(start, from)));
+			}
+			else if(to == "POUND") {
+				outputF.setText(String.valueOf(Currency.toPound(start, from)));
+			}
+			else if(to == "YEN") {
+				outputF.setText(String.valueOf(Currency.toYen(start, from)));
+			}
+			else if(to == "PESO") {
+				outputF.setText(String.valueOf(Currency.toPeso(start, from)));
+			}
+			else if(to == "CSD") {
+				outputF.setText(String.valueOf(Currency.toCanadian(start, from)));
+			}else {
+				outputF.setText("Error calculating");
+			}
+		}
+		
+	}
+	
+	
 	public CurrencyGui(String title) {
 		super(title);
 		setSize(300,250);
 		setLayout(new GridLayout(4,1));
+		
+		run.addActionListener(new CurrencyCalc());
 		
 		createp1();
 		createp2();

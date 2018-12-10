@@ -1,6 +1,6 @@
 public class Currency {
 
-	public double toUsd(double currency, String unit) {
+	public static double toUsd(double currency, String unit) {
 		if(unit == "USD") {
 			currency=currency;
 		}
@@ -22,7 +22,7 @@ public class Currency {
 		return currency;
 	}
 	
-	public double toEuro(double currency, String unit) {
+	public static double toEuro(double currency, String unit) {
 		if(unit == "USD") {
 			currency=currency*.86;
 		}
@@ -48,7 +48,7 @@ public class Currency {
 		return currency;
 	}
 	//.78
-	public double toPound(double currency, String unit) {
+	public static double toPound(double currency, String unit) {
 		if(unit == "USD") {
 			currency=currency*.76;
 		}
@@ -74,7 +74,7 @@ public class Currency {
 		return currency;
 	}
 	//113.08 yen to usd
-	public int toYen(double currency, String unit) {
+	public static int toYen(double currency, String unit) {
 		if(unit == "USD") {
 			currency=currency*111.83;
 		}
@@ -100,7 +100,7 @@ public class Currency {
 		return (int)currency;
 	}
 	//20.24 peso to usd
-	public double toPeso(double currency, String unit) {
+	public static double toPeso(double currency, String unit) {
 		if(unit == "USD") {
 			currency=currency*18.79;
 		}
