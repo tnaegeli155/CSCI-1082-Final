@@ -1,19 +1,19 @@
 
 public class Mass {
 	
-	public static double toOz(int num1, int num2) {
+	public static String toOz(int num1, int num2) {
 		int lbs, oz, finalOz;
 	
 		lbs=num1*16;
 		oz=num2;
 		finalOz=lbs+oz;
 		
-		return finalOz;
+		return finalOz + " Oz";
 	}
 	
-	public static double toOz(double num) {
+	public static String toOz(double num) {
 		double oz=num/28.34;
-		return oz;
+		return oz + " Oz";
 	}
 	
 	public static String toLbs(int num1) {
@@ -30,7 +30,7 @@ public class Mass {
 		return lbs+" Lbs "+(int)oz+" Oz";
 	}
 	
-	public static double toGrams(int num1, int num2) {
+	public static String toGrams(int num1, int num2) {
 		int lbs, oz;
 		double grams;
 		
@@ -38,6 +38,6 @@ public class Mass {
 		oz = num2;
 		grams = (lbs+oz) * 28.34;
 		
-		return grams;
+		return grams + " Grams";
 	}
 }
