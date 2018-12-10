@@ -63,10 +63,10 @@ public class MassGui extends JFrame{
 				output.setText(Mass.toGrams(x));
 			}else if(from == "Oz") {
 				int x = num;
-				output.setText(Mass.toLbs(x));
+				output.setText(Mass.toGrams(x));
 			}else if(from == "Gram") {
 				double x = num2;
-				output.setText(Mass.toLbs(x));
+				output.setText(Mass.toGrams(x));
 			}
 		}else {
 			output.setText("Error");
